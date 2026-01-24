@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App name -->
+    <string name="app_name">Save Our Water</string>
+    <string name="app_tagline">Turn every drop count</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_tracking">Track</string>
+    <string name="nav_achievements">Achievements</string>
+    <string name="nav_insights">Insights</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Home Screen -->
+    <string name="home_today_usage">Today\'s Usage</string>
+    <string name="home_weekly_chart">Weekly Usage</string>
+    <string name="home_recent_activities">Recent Activities</string>
+    <string name="home_insight_title">Daily Insight</string>
+
+    <!-- Tracking Screen -->
+    <string name="tracking_quick_log">Quick Track</string>
+    <string name="tracking_manual_entry">Manual Entry</string>
+    <string name="tracking_goal_label">Daily Goal</string>
+    <string name="tracking_usage_label">%1$.1f L</string>
+    <string name="tracking_goal_status">%1$.1f / %2$.1f L</string>
+
+    <!-- Activity Types -->
+    <string name="activity_shower">Shower</string>
+    <string name="activity_tap">Tap</string>
+    <string name="activity_toilet">Toilet</string>
+    <string name="activity_laundry">Laundry</string>
+    <string name="activity_dishes">Dishes</string>
+    <string name="activity_garden">Garden</string>
+    <string name="activity_custom">Custom</string>
+
+    <!-- Activity Dialog -->
+    <string name="dialog_log_activity">Log Water Activity</string>
+    <string name="dialog_duration_label">Duration (minutes)</string>
+    <string name="dialog_amount_label">Amount (liters)</string>
+    <string name="dialog_notes_label">Notes (optional)</string>
+    <string name="dialog_confirm">Log Activity</string>
+    <string name="dialog_cancel">Cancel</string>
+
+    <!-- Achievements -->
+    <string name="achievements_title">Achievements</string>
+    <string name="achievements_unlocked">Unlocked</string>
+    <string name="achievements_locked">Locked</string>
+    <string name="achievements_progress">%1$d / %2$d</string>
+    <string name="achievements_filter_all">All</string>
+    <string name="achievements_filter_streaks">Streaks</string>
+    <string name="achievements_filter_conservation">Conservation</string>
+    <string name="achievements_filter_behavioral">Behavioral</string>
+
+    <!-- Achievement Tiers -->
+    <string name="tier_bronze">Bronze</string>
+    <string name="tier_silver">Silver</string>
+    <string name="tier_gold">Gold</string>
+    <string name="tier_platinum">Platinum</string>
+
+    <!-- Insights -->
+    <string name="insights_facts">Facts</string>
+    <string name="insights_tips">Tips</string>
+    <string name="insights_impact">Impact</string>
+    <string name="insights_calculator">Calculator</string>
+
+    <!-- Settings -->
+    <string name="settings_appearance">Appearance</string>
+    <string name="settings_theme">Theme</string>
+    <string name="settings_notifications">Notifications</string>
+    <string name="settings_goal">Daily Goal</string>
+    <string name="settings_units">Units</string>
+    <string name="settings_data">Data</string>
+    <string name="settings_clear_data">Clear All Data</string>
+    <string name="settings_export_data">Export Data</string>
+    <string name="settings_about">About</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome_title">Welcome to\nSave Our Water</string>
+    <string name="onboarding_welcome_subtitle">Turn every drop count into a global movement</string>
+    <string name="onboarding_problem_title">The Invisible Crisis</string>
+    <string name="onboarding_problem_subtitle">We track everything—except the most finite resource</string>
+    <string name="onboarding_solution_title">Your Conservation Dashboard</string>
+    <string name="onboarding_solution_subtitle">Track, reduce, and visualize your water footprint</string>
+    <string name="onboarding_goal_title">Set Your Daily Goal</string>
+    <string name="onboarding_goal_subtitle">Average household usage: 150 liters per day</string>
+    <string name="onboarding_permissions_title">Stay Motivated</string>
+    <string name="onboarding_permissions_subtitle">Get notified when you unlock achievements</string>
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_skip">Skip</string>
+    <string name="onboarding_get_started">Get Started</string>
+
+    <!-- Notifications -->
+    <string name="notification_achievement_title">Achievement Unlocked! 🏆</string>
+    <string name="notification_achievement_message">You\'ve earned: %1$s</string>
+    <string name="notification_reminder_title">Don\'t forget to track 💧</string>
+    <string name="notification_reminder_message">Log your water usage today</string>
+    <string name="notification_milestone_title">Milestone Reached! 🎉</string>
+    <string name="notification_milestone_message">You\'ve saved %1$.0f liters!</string>
+
+    <!-- Messages & Prompts -->
+    <string name="message_activity_logged">Activity logged successfully</string>
+    <string name="message_goal_reached">Daily goal reached!</string>
+    <string name="message_goal_exceeded">You\'ve exceeded your daily goal</string>
+    <string name="message_streak_continue">Keep your streak going!</string>
+    <string name="message_no_activities">No activities yet</string>
+    <string name="message_start_tracking">Start tracking your water usage</string>
+
+    <!-- Error Messages -->
+    <string name="error_network">No internet connection</string>
+    <string name="error_sync_failed">Sync failed. Will retry later.</string>
+    <string name="error_invalid_input">Please enter a valid amount</string>
+    <string name="error_generic">Something went wrong</string>
+
+    <!-- Common -->
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="close">Close</string>
+    <string name="retry">Retry</string>
+    <string name="loading">Loading…</string>
+    <string name="liters_unit">L</string>
+    <string name="liters_format">%1$.1f L</string>
+</resources>
