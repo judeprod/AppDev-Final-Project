@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Garden/Watering icon -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="?attr/colorControlNormal">
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M12,20L8.4,15.2C6.55,13.07 6.55,9.93 8.4,7.8L12,3L15.6,7.8C17.45,9.93 17.45,13.07 15.6,15.2L12,20M12,5.27L9.38,8.63C8.06,10.24 8.06,12.76 9.38,14.37L12,17.73L14.62,14.37C15.94,12.76 15.94,10.24 14.62,8.63L12,5.27Z" />
+</vector>

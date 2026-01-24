@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.saveourwater.ui.home.HomeFragment"
+        android:label="@string/nav_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_tracking"
+        android:name="com.saveourwater.ui.tracking.TrackingFragment"
+        android:label="@string/nav_tracking"
+        tools:layout="@layout/fragment_tracking" />
+
+    <fragment
+        android:id="@+id/nav_achievements"
+        android:name="com.saveourwater.ui.achievements.AchievementsFragment"
+        android:label="@string/nav_achievements"
+        tools:layout="@layout/fragment_achievements" />
+
+    <fragment
+        android:id="@+id/nav_insights"
+        android:name="com.saveourwater.ui.insights.InsightsFragment"
+        android:label="@string/nav_insights"
+        tools:layout="@layout/fragment_insights" />
+
+</navigation>

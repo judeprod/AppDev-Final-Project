@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dishes/Dishwasher icon -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="?attr/colorControlNormal">
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M8,14C9.66,14 11,12.66 11,11C11,9.34 9.66,8 8,8C6.34,8 5,9.34 5,11C5,12.66 6.34,14 8,14M8,10C8.55,10 9,10.45 9,11C9,11.55 8.55,12 8,12C7.45,12 7,11.55 7,11C7,10.45 7.45,10 8,10M16,14C17.66,14 19,12.66 19,11C19,9.34 17.66,8 16,8C14.34,8 13,9.34 13,11C13,12.66 14.34,14 16,14M16,10C16.55,10 17,10.45 17,11C17,11.55 16.55,12 16,12C15.45,12 15,11.55 15,11C15,10.45 15.45,10 16,10M12,18C7.58,18 4,19.79 4,22H20C20,19.79 16.42,18 12,18M12,20C14.21,20 16,20.67 17.24,21.41L6.76,21.41C8,20.67 9.79,20 12,20Z" />
+</vector>

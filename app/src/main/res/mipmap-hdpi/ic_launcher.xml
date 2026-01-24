@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fallback launcher icon for pre-API 26 devices -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Circle background -->
+    <path
+        android:fillColor="#00A8E8"
+        android:pathData="M24,24m-24,0a24,24 0,1 1,48 0a24,24 0,1 1,-48 0" />
+    <!-- Water drop -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,8C24,8 14,20 14,28C14,33.52 18.48,38 24,38C29.52,38 34,33.52 34,28C34,20 24,8 24,8M24,34C20.69,34 18,31.31 18,28C18,24.25 22.09,18.28 24,15.5C25.91,18.28 30,24.25 30,28C30,31.31 27.31,34 24,34Z" />
+</vector>
