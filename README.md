@@ -430,9 +430,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 **🎓 Project Team:**
-- �‍💻 **[Jay Arre Talosig](https://github.com/flexycode)** - Machine Learning Engineer | Blockchain Developer    
-- �‍💻 **[Jude Renwell B. Prodigalidad](https://github.com/judeprod)** - Machine Learning Engineer | Mobile App Developer | Software Engineer 
-- �‍💻 **[Diana Grace Paray](https://github.com/)** - Digital Forensics Analyst | Software Engineer | UI/UX Designer
+- 😎 **[Jay Arre Talosig](https://github.com/flexycode)** - Machine Learning Engineer | Blockchain Developer    
+- 🧊 **[Jude Renwell B. Prodigalidad](https://github.com/judeprod)** - Machine Learning Engineer | Mobile App Developer | Software Engineer 
+- 🎨 **[Diana Grace Paray](https://github.com/Yanayana-p)** - Digital Forensics Analyst | Software Engineer | UI/UX Designer
 - 👨‍💻 **[Kris Brian Diaz](https://github.com/)** - Digital Forensics Analyst | Software Engineer | UI/UX Designer
 
 **🔗 Links:**
