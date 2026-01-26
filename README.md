@@ -310,6 +310,46 @@ adb install app/build/outputs/apk/debug/app-debug.apk
 
 ## 📝 Changelog
 
+### Version 1.1.0-beta (January 26, 2026)
+
+#### 🎓 Enhanced Estimation Logic (Professor Feedback Implementation)
+
+**Added:**
+- ✨ **Behavioral Estimation Algorithm** - Calculate water volume based on user habits instead of guessing
+  - Formula: `EstimatedVolume = (BaseFlowRate × PressureMultiplier × Duration) × ContinuityFactor`
+- ✨ **FlowPressure enum** - Low (0.8x), Normal (1.0x), High (1.5x) multipliers
+- ✨ **WaterSource enum** - Shower (9 L/min), Bucket/Faucet (6 L/min) base rates
+- ✨ **DetailedTrackingBottomSheet** - New UI for detailed water usage tracking
+- ✨ **Enhanced WaterCalculator** - Added `calculateEstimatedVolume()` function
+- ✨ **4 New Input Components:**
+  - 🚿 Water Source Selector (Shower vs Bucket/Faucet)
+  - 💧 Flow Pressure Gauge (Low/Normal/High)
+  - ♻️ Eco-Mode Toggle (Intermittent water use reduces consumption by 40%)
+  - ⏱️ Duration Input (Minutes of water flow)
+
+**UI/UX:**
+- 🎨 **dialog_detailed_tracking.xml** - Material Design 3 bottom sheet layout
+- 🎨 **bg_eco_mode_card.xml** - Custom background for eco-mode toggle
+- 🎨 **12 new string resources** for detailed tracking UI
+- 🎨 **Real-time volume calculation** - Updates as user changes inputs
+
+**Technical Improvements:**
+- ⚡ Integrated DetailedTrackingBottomSheet with TrackingFragment
+- ⚡ Added `logDetailedActivity()` to TrackingViewModel
+- ⚡ FAB now opens detailed tracking dialog instead of placeholder
+- ⚡ Activity logged with "Detailed tracking estimation" notes
+
+**Example Calculations:**
+- Shower + High Pressure + 5 min + Continuous = **67.5 L**
+- Bucket + Low Pressure + 10 min + Eco-Mode = **28.8 L**
+- Shower + Normal + 3 min + Eco-Mode = **16.2 L**
+
+**Documentation:**
+- 📚 Updated `CODE_REVIEW_PHASE2_CORE_TRACKING_FEATURES.md` with PHASE2-FEAT-P1-023 task
+- 📚 Added implementation details and acceptance criteria
+
+---
+
 ### Version 1.0.0-beta (January 24, 2026)
 
 #### 🎉 Phase 2 Implementation - Core Tracking Features

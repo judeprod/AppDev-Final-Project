@@ -120,4 +120,21 @@
     <string name="loading">Loading…</string>
     <string name="liters_unit">L</string>
     <string name="liters_format">%1$.1f L</string>
+
+    <!-- Detailed Tracking (PHASE2-FEAT-P1-023) -->
+    <string name="detailed_tracking_title">Detailed Tracking</string>
+    <string name="detailed_tracking_subtitle">Estimate water usage based on your habits</string>
+    <string name="source_label">Water Source</string>
+    <string name="source_shower">🚿 Shower</string>
+    <string name="source_bucket">🪣 Bucket/Faucet</string>
+    <string name="pressure_label">Water Pressure</string>
+    <string name="pressure_low">Low</string>
+    <string name="pressure_normal">Normal</string>
+    <string name="pressure_high">High</string>
+    <string name="eco_mode_label">Eco-Mode</string>
+    <string name="eco_mode_description">Turn off water while scrubbing?</string>
+    <string name="duration_label">Duration (minutes)</string>
+    <string name="duration_hint">Enter minutes</string>
+    <string name="estimated_volume">Estimated: %1$.1f L</string>
+    <string name="log_detailed_activity">Log Activity</string>
 </resources>

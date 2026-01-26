@@ -23,6 +23,7 @@ import kotlinx.coroutines.launch
  * Fragment for water tracking
  * PHASE2-UI-P0-012: Design Tracking Fragment Layout
  * PHASE2-FEAT-P1-018: Build Real-time Progress Updates
+ * PHASE2-FEAT-P1-023: Enhanced Estimation Logic (Professor Feedback)
  */
 class TrackingFragment : Fragment() {
 
@@ -64,7 +65,7 @@ class TrackingFragment : Fragment() {
     private fun setupRecyclerView() {
         activityAdapter = ActivityAdapter { item ->
             if (item.type == ActivityType.CUSTOM) {
-                showManualEntryDialog()
+                showDetailedTrackingDialog()
             } else {
                 viewModel.logQuickActivity(item.type)
                 Toast.makeText(
@@ -83,13 +84,26 @@ class TrackingFragment : Fragment() {
 
     private fun setupClickListeners() {
         fabManualEntry.setOnClickListener {
-            showManualEntryDialog()
+            showDetailedTrackingDialog()
         }
     }
 
-    private fun showManualEntryDialog() {
-        // TODO: Implement LogActivityBottomSheet
-        Toast.makeText(context, "Manual Entry - Coming Soon", Toast.LENGTH_SHORT).show()
+    /**
+     * Show the Detailed Tracking Bottom Sheet for behavioral estimation
+     * PHASE2-FEAT-P1-023: Enhanced Estimation Logic
+     */
+    private fun showDetailedTrackingDialog() {
+        val bottomSheet = DetailedTrackingBottomSheet.newInstance()
+        bottomSheet.setOnActivityLoggedListener { estimatedLiters ->
+            // Log the activity with estimated volume
+            viewModel.logDetailedActivity(estimatedLiters)
+            Toast.makeText(
+                context,
+                getString(R.string.estimated_volume, estimatedLiters),
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+        bottomSheet.show(childFragmentManager, DetailedTrackingBottomSheet.TAG)
     }
 
     private fun observeViewModel() {
@@ -127,3 +141,4 @@ class TrackingFragment : Fragment() {
         tvGoalStatus.text = getString(R.string.tracking_goal_status, usage, goal)
     }
 }
+

@@ -120,6 +120,22 @@ class TrackingViewModel(application: Application) : AndroidViewModel(application
         val goal = _dailyGoal.value ?: 150.0
         return ((usage / goal) * 100).toInt().coerceIn(0, 100)
     }
+
+    /**
+     * Log a water activity from the detailed tracking dialog
+     * PHASE2-FEAT-P1-023: Enhanced Estimation Logic (Professor Feedback)
+     */
+    fun logDetailedActivity(estimatedLiters: Double) {
+        viewModelScope.launch {
+            val activity = WaterActivity(
+                activityType = ActivityType.CUSTOM,
+                litersUsed = estimatedLiters,
+                durationSeconds = 0,
+                notes = "Detailed tracking estimation"
+            )
+            repository.insertActivity(activity)
+        }
+    }
 }
 
 /**
@@ -131,3 +147,4 @@ data class ActivityItem(
     val estimatedUsage: String,
     val iconRes: Int
 )
+
