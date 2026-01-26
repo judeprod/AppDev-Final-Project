@@ -888,6 +888,48 @@ class RecentActivitiesAdapter :
   - [x] HomeViewModel with insights generation
   - [x] Proper lifecycle handling
 
+- [x] **Enhanced Estimation Logic (Professor Feedback)**
+  - [x] FlowPressure enum (Low/Normal/High multipliers)
+  - [x] WaterSource enum (Shower/Bucket rates)
+  - [x] Behavioral calculation algorithm
+  - [x] DetailedTrackingBottomSheet UI
+
+---
+
+### PHASE2-FEAT-P1-023: Enhanced Estimation Logic (Professor Feedback)
+**Description:**  
+Implement behavioral estimation algorithm to calculate water volume based on user habits rather than simple guessing.
+
+**Formula:** `EstimatedVolume = (BaseFlowRate × PressureMultiplier × Duration) × ContinuityFactor`
+
+**New UI Components:**
+1. **Flow Pressure Selector:** Low (0.8x), Normal (1.0x), High (1.5x)
+2. **Source Type Selector:** Shower (9 L/min), Bucket/Faucet (6 L/min)
+3. **Intermittency Toggle:** Eco-Mode reduces effective time by 40%
+4. **Duration Input:** Minutes of water usage
+
+**Files Created:**
+- `FlowPressure.kt` - Pressure level enum
+- `WaterSource.kt` - Water source enum
+- `dialog_detailed_tracking.xml` - Bottom sheet layout
+- `DetailedTrackingBottomSheet.kt` - Bottom sheet fragment
+- `bg_eco_mode_card.xml` - Eco-mode card background
+
+**Files Modified:**
+- `WaterCalculator.kt` - Added `calculateEstimatedVolume()` function
+- `TrackingFragment.kt` - Integrated DetailedTrackingBottomSheet
+- `TrackingViewModel.kt` - Added `logDetailedActivity()` function
+- `strings.xml` - Added detailed tracking strings
+
+**Acceptance Criteria:**
+- [x] FlowPressure enum with multipliers (0.8, 1.0, 1.5)
+- [x] WaterSource enum with base rates (9, 6 L/min)
+- [x] calculateEstimatedVolume() implements the algorithm
+- [x] Bottom sheet with source, pressure, eco-mode, duration inputs
+- [x] Real-time volume calculation as inputs change
+- [x] FAB opens detailed tracking dialog
+- [x] Activity logged to database
+
 ---
 
 ## Next Steps

@@ -1,12 +1,22 @@
 package com.saveourwater.utils
 
 import com.saveourwater.data.local.entities.ActivityType
+import com.saveourwater.data.local.entities.FlowPressure
+import com.saveourwater.data.local.entities.WaterSource
 
 /**
  * Utility for water usage calculations
  * PHASE2-FEAT-P1-016: Create WaterCalculator Utility
+ * PHASE2-FEAT-P1-023: Enhanced Estimation Logic (Professor Feedback)
  */
 object WaterCalculator {
+
+    /**
+     * Continuity factors for Eco-Mode calculation
+     * PHASE2-FEAT-P1-023: Enhanced Estimation Logic
+     */
+    const val CONTINUITY_CONTINUOUS = 1.0      // Water running continuously
+    const val CONTINUITY_INTERMITTENT = 0.6    // Eco-mode: water off ~40% of time
 
     /**
      * Average liters per minute for each activity type
@@ -34,6 +44,31 @@ object WaterCalculator {
         ActivityType.GARDEN to 10,
         ActivityType.CUSTOM to 1
     )
+
+    /**
+     * Calculate estimated volume based on behavioral variables
+     * PHASE2-FEAT-P1-023: Enhanced Estimation Logic (Professor Feedback)
+     * 
+     * Formula: (BaseFlowRate × PressureMultiplier × Duration) × ContinuityFactor
+     * 
+     * @param source Water source type (Shower or Bucket/Faucet)
+     * @param pressure Flow pressure level (Low, Normal, High)
+     * @param durationMinutes Duration of water usage in minutes
+     * @param isIntermittent True if user turns off water while scrubbing (Eco-Mode)
+     * @return Estimated water volume in liters
+     */
+    fun calculateEstimatedVolume(
+        source: WaterSource,
+        pressure: FlowPressure,
+        durationMinutes: Int,
+        isIntermittent: Boolean
+    ): Double {
+        val baseRate = source.baseFlowRate
+        val pressureMultiplier = pressure.multiplier
+        val continuityFactor = if (isIntermittent) CONTINUITY_INTERMITTENT else CONTINUITY_CONTINUOUS
+        
+        return (baseRate * pressureMultiplier * durationMinutes) * continuityFactor
+    }
 
     /**
      * Calculate liters used based on activity type and duration
@@ -118,3 +153,4 @@ object WaterCalculator {
         }
     }
 }
+
