@@ -310,6 +310,31 @@ adb install app/build/outputs/apk/debug/app-debug.apk
 
 ## 📝 Changelog
 
+### Version 1.2.0-beta (February 2, 2026)
+
+#### 🎨 UI Color Scheme Refinement
+
+**Updated:**
+- 🎨 **Primary Color Palette** - Replaced bright cyan-based colors with refined Twine.net blue palette
+  - Primary 500: `#00A8E8` → `#628ECB` (softer, more professional blue)
+  - Primary 700: `#006494` → `#395886` (deeper navy for better contrast)
+  - Primary 50-900: Complete gradient updated for visual consistency
+- 🎨 **Enhanced Visual Identity** - New color scheme better represents water conservation theme
+- 🎨 **Improved Accessibility** - Better color contrast ratios for text readability
+
+**Technical Details:**
+- Updated `colors.xml` with 11 new primary color values
+- Maintained Material Design 3 color system structure
+- Preserved all secondary (green), warning, error, and neutral colors
+- Build verified with `./gradlew assembleDebug` (successful)
+
+**Design Rationale:**
+- Previous bright cyan (#00A8E8) was too vibrant for extended use
+- New palette (#628ECB) provides a calmer, more trustworthy appearance
+- Aligns with water conservation messaging (calm, thoughtful, sustainable)
+
+---
+
 ### Version 1.1.0-beta (January 26, 2026)
 
 #### 🎓 Enhanced Estimation Logic (Professor Feedback Implementation)
@@ -473,7 +498,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - 😎 **[Jay Arre Talosig](https://github.com/flexycode)** - Machine Learning Engineer | Blockchain Developer    
 - 🧊 **[Jude Renwell B. Prodigalidad](https://github.com/judeprod)** - Machine Learning Engineer | Mobile App Developer | Software Engineer 
 - 🎨 **[Diana Grace Paray](https://github.com/Yanayana-p)** - Digital Forensics Analyst | Software Engineer | UI/UX Designer
-- 👨‍💻 **[Kris Brian Diaz](https://github.com/)** - Digital Forensics Analyst | Software Engineer | UI/UX Designer
+- 👨‍💻 **[Kris Brian Diaz](https://github.com/toblerone14)** - Digital Forensics Analyst | Software Engineer | UI/UX Designer
 
 **🔗 Links:**
 - 📦 Project Repository: [https://github.com/judeprod/AppDev-Final-Project](https://github.com/judeprod/AppDev-Final-Project)
