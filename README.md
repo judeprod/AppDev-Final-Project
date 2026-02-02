@@ -12,6 +12,13 @@ Save Our Water is an innovative Android application that empowers users to track
 
 ---
 
+<!-- Application Development -->
+<div align="center">
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3NzJoYW15OW8wYnM5M3gxNTMxNDBnYm5pd2NxaW5oeW1xbjA0Nnp5NSZlcD12MV9zdGlja2Vyc19yZWxhdGVkJmN0PXM/zk5dIABdvPddR05XST/giphy.gif" width="300">
+<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDdla2EwbTJoMGFzZGFieDZucDludGhqNGV3cTJleXB5MDAwZ2NpMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dHM/VAWOYWrLQfJtH0kl9T/giphy.gif" width="250">  
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3NzJoYW15OW8wYnM5M3gxNTMxNDBnYm5pd2NxaW5oeW1xbjA0Nnp5NSZlcD12MV9zdGlja2Vyc19yZWxhdGVkJmN0PXM/xU3230IgaKOUuaQSIO/giphy.gif" width="300">
+</div>
+
 ## 🌊 Project Overview
 
 ### 💡 The Problem
@@ -529,3 +536,28 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **💧 Making water visible, valuable, and sustainable - one drop at a time. 🌍**
 
 *Built with ❤️ for a better planet*
+
+<!-- End point line insert Thanks for visiting enjoy your day, feel free to modify this  -->
+---
+<p align="center">
+<img src="https://readme-typing-svg.demolab.com/?lines=Thanks+For+Visiting+Enjoy+Your+Day+~!;" alt="mystreak"/>
+</p>
+
+<!-- Application Development -->
+<div align="center">
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHNkMnA0N2Vrb2xvd3ZqYTM3bmttbDNlZjBva2tkYmZtOHJpaDJmcCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/lqS13WhUqsOZX0Bfra/giphy.gif" width="300">
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHNkMnA0N2Vrb2xvd3ZqYTM3bmttbDNlZjBva2tkYmZtOHJpaDJmcCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/ifAGoENIUgTe5Fwqeq/giphy.gif" width="300">
+</div>
+
+<!-- End point line insert Comeback again next time, feel free to modify this  -->
+<p align="center">
+<img src="https://readme-typing-svg.demolab.com/?lines=Come+Back+Again+next+time" alt="mystreak"/>
+</p>
+
+</p>
+    
+<br>
+<!-- End point insert background effect line of sight color red -->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="1000">
+
+
