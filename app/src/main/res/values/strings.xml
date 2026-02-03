@@ -137,4 +137,25 @@
     <string name="duration_hint">Enter minutes</string>
     <string name="estimated_volume">Estimated: %1$.1f L</string>
     <string name="log_detailed_activity">Log Activity</string>
+
+    <!-- Authentication (Supabase) -->
+    <string name="auth_login_title">Welcome Back</string>
+    <string name="auth_signup_title">Create Account</string>
+    <string name="auth_subtitle">Sync your water conservation journey</string>
+    <string name="auth_email_hint">Email</string>
+    <string name="auth_password_hint">Password</string>
+    <string name="auth_confirm_password_hint">Confirm Password</string>
+    <string name="auth_login_button">Log In</string>
+    <string name="auth_signup_button">Sign Up</string>
+    <string name="auth_switch_to_signup">Don\'t have an account? Sign Up</string>
+    <string name="auth_switch_to_login">Already have an account? Log In</string>
+    <string name="auth_skip_button">Continue Offline</string>
+    <string name="auth_offline_note">Your data will be saved locally. You can sync later.</string>
+    <string name="auth_error_invalid_email">Please enter a valid email</string>
+    <string name="auth_error_weak_password">Password must be at least 6 characters</string>
+    <string name="auth_error_password_mismatch">Passwords do not match</string>
+    <string name="auth_forgot_password">Forgot Password?</string>
+    <string name="auth_logout">Log Out</string>
+    <string name="auth_logged_in_as">Logged in as %1$s</string>
 </resources>
+

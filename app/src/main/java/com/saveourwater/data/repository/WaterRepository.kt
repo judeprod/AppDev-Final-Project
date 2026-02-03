@@ -6,12 +6,14 @@ import com.saveourwater.data.local.entities.EcoGoal
 import com.saveourwater.data.local.entities.WaterActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.withContext
 import java.util.Calendar
 
 /**
  * Repository for Water data operations
  * PHASE2-FEAT-P0-015: Build WaterRepository
+ * PHASE3-FEAT-P2-032: Added streak calculation methods
  * 
  * Implements offline-first strategy with Room Database
  */
@@ -88,10 +90,88 @@ class WaterRepository(
         }
     }
 
+    // ===================== Streak & Achievement Tracking =====================
+
+    /**
+     * Calculate current consecutive days streak
+     * PHASE3-FEAT-P2-032: Implement Streak Calculation
+     */
+    suspend fun getCurrentStreak(): Int {
+        return withContext(Dispatchers.IO) {
+            val activities = waterActivityDao.getAllActivitiesFlow().first()
+            calculateStreak(activities)
+        }
+    }
+
+    private fun calculateStreak(activities: List<WaterActivity>): Int {
+        if (activities.isEmpty()) return 0
+
+        val today = getDateOnly(System.currentTimeMillis())
+        val yesterday = getDateOnly(today - 24 * 60 * 60 * 1000)
+
+        // Get unique dates with activities, sorted descending
+        val datesWithActivities = activities
+            .map { getDateOnly(it.timestamp) }
+            .distinct()
+            .sortedDescending()
+
+        if (datesWithActivities.isEmpty()) return 0
+
+        // Check if today or yesterday has activity
+        val latestDate = datesWithActivities.first()
+        if (latestDate != today && latestDate != yesterday) {
+            return 0 // Streak broken
+        }
+
+        var streak = 0
+        var expectedDate = if (latestDate == today) today else yesterday
+
+        for (date in datesWithActivities) {
+            if (date == expectedDate) {
+                streak++
+                expectedDate = getDateOnly(expectedDate - 24 * 60 * 60 * 1000)
+            } else if (date < expectedDate) {
+                break // Gap in days, streak ends
+            }
+        }
+
+        return streak
+    }
+
+    /**
+     * Get total number of activities logged
+     */
+    suspend fun getTotalActivities(): Int {
+        return withContext(Dispatchers.IO) {
+            waterActivityDao.getAllActivitiesFlow().first().size
+        }
+    }
+
+    /**
+     * Get count of unique activity types logged
+     */
+    suspend fun getUniqueActivityTypesLogged(): Int {
+        return withContext(Dispatchers.IO) {
+            val activities = waterActivityDao.getAllActivitiesFlow().first()
+            activities.map { it.activityType }.distinct().size
+        }
+    }
+
     // ===================== Utilities =====================
 
     private fun getStartOfDay(): Long {
         val calendar = Calendar.getInstance().apply {
+            set(Calendar.HOUR_OF_DAY, 0)
+            set(Calendar.MINUTE, 0)
+            set(Calendar.SECOND, 0)
+            set(Calendar.MILLISECOND, 0)
+        }
+        return calendar.timeInMillis
+    }
+
+    private fun getDateOnly(timestamp: Long): Long {
+        val calendar = Calendar.getInstance().apply {
+            timeInMillis = timestamp
             set(Calendar.HOUR_OF_DAY, 0)
             set(Calendar.MINUTE, 0)
             set(Calendar.SECOND, 0)
@@ -111,3 +191,4 @@ class WaterRepository(
         return waterActivityDao.getActivitiesBetween(startTime, endTime)
     }
 }
+

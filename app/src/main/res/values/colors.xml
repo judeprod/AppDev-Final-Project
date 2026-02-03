@@ -49,6 +49,7 @@
 
     <!-- Semantic Colors -->
     <color name="success">#4CAF50</color>
+    <color name="success_light">#E8F5E9</color>
     <color name="info">#2196F3</color>
     <color name="warning">#FF9800</color>
     <color name="danger">#F44336</color>
@@ -69,4 +70,13 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="transparent">#00000000</color>
+
+    <!-- Semantic Aliases (for easier use in layouts) -->
+    <color name="background">@color/background_light</color>
+    <color name="surface">@color/surface_light</color>
+    <color name="text_primary">@color/text_primary_light</color>
+    <color name="text_secondary">@color/text_secondary_light</color>
+    <color name="text_hint">@color/gray_400</color>
+    <color name="divider">@color/gray_200</color>
 </resources>
+

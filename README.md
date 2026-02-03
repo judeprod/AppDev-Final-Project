@@ -12,12 +12,31 @@ Save Our Water is an innovative Android application that empowers users to track
 
 ---
 
+<<<<<<< Updated upstream
 <!-- Application Development -->
 <div align="center">
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3NzJoYW15OW8wYnM5M3gxNTMxNDBnYm5pd2NxaW5oeW1xbjA0Nnp5NSZlcD12MV9zdGlja2Vyc19yZWxhdGVkJmN0PXM/zk5dIABdvPddR05XST/giphy.gif" width="300">
 <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDdla2EwbTJoMGFzZGFieDZucDludGhqNGV3cTJleXB5MDAwZ2NpMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dHM/VAWOYWrLQfJtH0kl9T/giphy.gif" width="250">  
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3NzJoYW15OW8wYnM5M3gxNTMxNDBnYm5pd2NxaW5oeW1xbjA0Nnp5NSZlcD12MV9zdGlja2Vyc19yZWxhdGVkJmN0PXM/xU3230IgaKOUuaQSIO/giphy.gif" width="300">
 </div>
+=======
+## 📋 Table of Contents
+
+- [🌊 Project Overview](#-project-overview)
+- [📸 Screenshots](#-screenshots)
+- [🚀 Features](#-features)
+- [🛠️ Technology Stack](#️-technology-stack)
+- [📁 Project Structure](#-project-structure)
+- [🎯 Development Timeline](#-development-timeline)
+- [📲 Installation](#-installation)
+- [🧪 Testing](#-testing)
+- [🚀 API Documentation](#-api-documentation)
+- [🤝 Contributing](#-contributing)
+- [📝 Changelog](#-changelog)
+- [📄 License](#-license)
+
+---
+>>>>>>> Stashed changes
 
 ## 🌊 Project Overview
 
@@ -31,6 +50,55 @@ We live in a world where we track everything—steps, calories, screen time—ye
 - 📊 **Impact visualization & contextual insights**
 - 🏆 **Achievement system** for behavioral change
 - 🌍 **Educational content** on water conservation
+
+---
+
+## 📸 Screenshots
+
+<div align="center">
+
+### 🏠 Home Dashboard
+<img src="assets/1.png" width="300" alt="Home Dashboard"/>
+
+*Real-time water usage overview with daily stats, weekly trend chart, and quick action buttons. Features streak counter, conservation tips, and recent activity feed.*
+
+---
+
+### 💧 Water Tracking Interface
+<img src="assets/2.png" width="300" alt="Water Tracking"/>
+
+*Intuitive activity logging with 6 preset categories (Shower, Tap, Toilet, Laundry, Dishes, Garden). Smart estimation based on duration and flow rate.*
+
+---
+
+### 📊 Activity History & Analytics
+<img src="assets/3.png" width="300" alt="Activity Log"/>
+
+*Comprehensive usage history with filterable timeline, detailed breakdown by category, and visual progress toward daily goals.*
+
+---
+
+### 🏆 Achievements Gallery
+<img src="assets/4.png" width="300" alt="Achievements Gallery"/>
+
+*Gamification system with 12 unlockable achievements across Bronze, Silver, Gold, and Platinum tiers. Tracks streaks, conservation milestones, and behavioral goals.*
+
+---
+
+### 🔥 Streak Progress & Milestones
+<img src="assets/5.png" width="300" alt="Streak Progress"/>
+
+*Achievement detail view showing progress tracking, unlock requirements, and sharing functionality. Motivates consistent water-saving habits.*
+
+---
+
+**✨ Design Highlights:**
+- Material Design 3 with custom color palette
+- Smooth animations and transitions
+- Dark mode support (system-aware)
+- Accessibility-first approach
+
+</div>
 
 ---
 
@@ -316,6 +384,65 @@ adb install app/build/outputs/apk/debug/app-debug.apk
 ---
 
 ## 📝 Changelog
+
+### Version 1.3.0-beta (February 2, 2026)
+
+#### 🏆 Phase 3: Gamification & Engagement
+
+**Added:**
+- ✨ **Achievement System** - Complete gamification framework with 12 unlockable achievements
+- ✨ **AchievementManager** - Progress tracking and automatic unlock logic
+- ✨ **Achievement Notifications** - Real-time notifications when achievements are unlocked
+- ✨ **Streak Calculation** - Proper consecutive day tracking algorithm
+- ✨ **Achievements UI** - Gallery screen with category tabs, progress cards, and detail bottom sheet
+- ✨ **Share Achievements** - Social sharing functionality for unlocked achievements
+- ✨ **Home Streak Widget** - Live streak counter on home dashboard
+
+**Achievements Implemented:**
+
+| Tier | Achievement | Target |
+|------|-------------|--------|
+| 🥉 Bronze | Getting Started | 3-day streak |
+| 🥈 Silver | Week Warrior | 7-day streak |
+| 🥇 Gold | Two Week Champion | 14-day streak |
+| 💎 Platinum | Monthly Master | 30-day streak |
+| 🥉 Bronze | Drop Saver | Save 100L |
+| 🥈 Silver | Water Guardian | Save 500L |
+| 🥇 Gold | Conservation Hero | Save 1000L |
+| 💎 Platinum | Planet Protector | Save 5000L |
+| 🥉 Bronze | First Drop | Log 1 activity |
+| 🥉 Bronze | Eco Starter | 5 eco-mode uses |
+| 🥈 Silver | Goal Crusher | 7 days under goal |
+| 🥈 Silver | Well Rounded | Log all 6 types |
+
+**New Files:**
+- `Achievement.kt` - Room entity with category/tier enums
+- `AchievementDao.kt` - Flow-based DAO queries
+- `AchievementDefinitions.kt` - 12 predefined achievements
+- `AchievementManager.kt` - Progress checking & unlock logic
+- `NotificationHelper.kt` - Achievement unlock notifications
+- `AchievementsFragment.kt` - Achievements gallery screen
+- `AchievementsViewModel.kt` - Category filtering & progress
+- `AchievementsAdapter.kt` - Achievement cards with animations
+- `AchievementDetailBottomSheet.kt` - Detail view with sharing
+- 3 new layouts: `fragment_achievements.xml`, `item_achievement.xml`, `dialog_achievement_detail.xml`
+- 7 achievement icons
+
+**Modified Files:**
+- `AppDatabase.kt` - Added Achievement entity, DAO, seeding callback (v1→v2)
+- `Converters.kt` - Added AchievementCategory/Tier converters
+- `WaterRepository.kt` - Added streak calculation methods
+- `SaveOurWaterApplication.kt` - Added lazy-init DI for AchievementManager
+- `HomeViewModel.kt` - Connected streak widget to live data
+- `colors.xml` - Added `success_light` color
+
+**Technical Details:**
+- Database version upgrade: 1 → 2 with destructive migration
+- Achievement seeding via Room database callback on first install
+- Streak algorithm tracks consecutive days (breaks on gaps)
+- Build verified with `./gradlew assembleDebug` (successful)
+
+---
 
 ### Version 1.2.0-beta (February 2, 2026)
 

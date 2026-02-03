@@ -1,6 +1,5 @@
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
     id("com.google.devtools.ksp")
     id("androidx.navigation.safeargs.kotlin")
 }
@@ -19,7 +18,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         
         // Supabase configuration
-        buildConfigField("String", "SUPABASE_URL", "\"https://your-project.supabase.co\"")
+        buildConfigField("String", "SUPABASE_URL", "\"${findProperty("supabase.url") ?: ""}\"")
         buildConfigField("String", "SUPABASE_ANON_KEY", "\"${findProperty("supabase.anon.key") ?: ""}\"")
     }
 
@@ -48,10 +47,6 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    
-    kotlinOptions {
-        jvmTarget = "17"
-    }
 }
 
 dependencies {
@@ -78,7 +73,16 @@ dependencies {
     implementation("androidx.room:room-ktx:2.7.0")
     ksp("androidx.room:room-compiler:2.7.0")
     
-    // Retrofit + OkHttp
+    // Supabase Kotlin Client
+    implementation(platform("io.github.jan-tennert.supabase:bom:3.1.4"))
+    implementation("io.github.jan-tennert.supabase:postgrest-kt")
+    implementation("io.github.jan-tennert.supabase:auth-kt")
+    implementation("io.github.jan-tennert.supabase:realtime-kt")
+    
+    // Ktor engine for Supabase
+    implementation("io.ktor:ktor-client-android:3.1.1")
+    
+    // Retrofit + OkHttp (keeping for potential other APIs)
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")

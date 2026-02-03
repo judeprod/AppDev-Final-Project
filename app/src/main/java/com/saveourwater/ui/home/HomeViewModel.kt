@@ -40,7 +40,7 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
     private val _dailyGoal = MutableLiveData(150.0)
     val dailyGoal: LiveData<Double> = _dailyGoal
 
-    // Current streak (placeholder - needs proper calculation)
+    // Current streak - PHASE3-UI-P2-033: Uses proper consecutive day calculation
     private val _currentStreak = MutableLiveData(0)
     val currentStreak: LiveData<Int> = _currentStreak
 
@@ -69,10 +69,14 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
+    /**
+     * Load current streak using proper consecutive day calculation
+     * PHASE3-UI-P2-033: Add Streak Widget to Home
+     */
     private fun loadStreak() {
         viewModelScope.launch {
-            val daysLogged = repository.getDaysWithActivities()
-            _currentStreak.value = daysLogged
+            val streak = repository.getCurrentStreak()
+            _currentStreak.value = streak
         }
     }
 
